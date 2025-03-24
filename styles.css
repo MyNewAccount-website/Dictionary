@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root{
+    --primary-color: #11121a;
+    --hover-color: #272832;
+    --accent-color: #0071ff;
+    --hover-accent-color: #005bcb;
+    --text-color: #c9c9c9;
+}
+
+
+body {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container{
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--text-color);
+    top: 0;
+}
+
+.link_info{
+    background-color: var(--accent-color);
+}
+
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: var(--text-color);
+}
+
+.nav_container li{
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 150ms ease-in;
+}
+
+.nav_container li:hover{
+    background-color: var(--hover-color);
+}
+
+.nav_container li:last-child:hover {
+    background-color: var(--hover-accent-color);
+}
+
+.link_header{
+    margin-right: auto;
+}
+
+.hamburger_menu{
+    display: none;
+}
+
+#close_button{
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    .container{
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(15em, 100%);
+        height: 100vh;
+        z-index: 10;
+        transition: right 250ms ease-in-out;
+        border-left: 1px solid var(--primary-color);
+    }
+
+    .nav_container li:hover{
+        background-color: var(--text-color);
+    }
+
+    #close_button{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        transition: background-color 150ms ease-in;
+        cursor: pointer;
+    }
+
+    #close_button:hover{
+        background-color: var(--text-color);
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .container.show{
+        right: 0;
+    }
+
+    .nav_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_container li{
+        color: black;
+        width: 100%;
+    }
+
+    .hamburger_menu{
+        display: flex;
+        border-bottom: 1px solid var(--text-color);
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        background-color: var(--primary-color);
+        top: 0;
+    }
+
+
+    .hamburger_menu div, .hamburger_menu i{
+        color: var(--text-color);
+        font-size: 20px;
+        margin: 0;
+        padding: 20px;
+        cursor: pointer;
+        transition: background-color 150ms ease-in;
+    }
+    
+    .hamburger_menu i:hover, .hamburger_menu div:hover{
+        background-color: var(--hover-color);
+    }
+
+    .overlay{
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        opacity: 0.4;
+    }
+
+    .overlay.show{
+        display: block;
+    }
+}
+
+.main_table {
+    color: var(--text-color);
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-top: 95px;
+    margin-bottom: 95px;
+    background-color: var(--primary-color);
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5);
+
+}
+
+.main_table th, .main_table td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+}
+
+.main_table .table_header {
+    background-color: var(--primary-color);
+}
+
+.main_table tr:nth-child(even) {
+    background-color: var(--hover-color);
+}
