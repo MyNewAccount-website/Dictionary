@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словник</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <script src="./main.js" defer></script>
+
+    <div class="hamburger_menu">
+        <div class="mobile_link_header">Словник</div>
+        <i id="menu_button" onclick="openSideBarMenu()" style="color: white; font-size: 24px;" class="material-icons">menu</i>
+    </div>
+
+    <div onclick="closeSideBarMenu()" id="overlay" class="overlay"></div>
+
+    <div id="container" class="container">
+        <ul class="nav_container">
+            <i id="close_button" onclick="closeSideBarMenu()" style="color: black; font-size: 24px;" class="material-icons">close</i>
+            <li class="link_header">Словник</li>
+            <li>Найти слово</li>
+            <li id="AddToTable_Button">Добавить</li>
+            <li id="RemoveFromTable_Button" >Удалить</li>
+            <li class="link_info">О сайте</li>
+        </ul>
+    </div>
+
+    <table class="main_table">
+        <tr class="table_header">
+            <th>№</th>
+            <th>Испанский</th>
+            <th>Русский</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Decadencia</td>
+            <td>Упадок</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pinacoteca</td>
+            <td>Галерея</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Levantamiento</td>
+            <td>Восстание</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Plenamente</td>
+            <td>Полностю</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Tiempo</td>
+            <td>Время</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Lluvia</td>
+            <td>Дождь</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Tormenta</td>
+            <td>Гроза</td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Primavera</td>
+            <td>Весна</td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>Invierno</td>
+            <td>Зима</td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td>Luna</td>
+            <td>Луна</td>
+        </tr>
+    </table>
+
+</body>
+</html>
